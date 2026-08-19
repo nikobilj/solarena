@@ -1,95 +1,582 @@
-
 <!DOCTYPE html>
 <html lang="de">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SOLARENA – Solarenergie für urbane Infrastruktur</title>
-    <style>
-        body {
-            margin: 0;
-            font-family: 'Arial', sans-serif;
-            background-color: #f8f9fa;
-            color: #333;
-        }
-        header {
-            background: #0f4c81;
-            color: white;
-            padding: 2rem;
-            text-align: center;
-        }
-        header h1 {
-            margin: 0;
-            font-size: 2.5rem;
-        }
-        header p {
-            font-size: 1.2rem;
-        }
-        section {
-            padding: 2rem;
-            max-width: 1000px;
-            margin: auto;
-        }
-        .products {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 1.5rem;
-        }
-        .product {
-            background: white;
-            padding: 1.5rem;
-            border-radius: 8px;
-            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-        }
-        .cta {
-            text-align: center;
-            margin-top: 2rem;
-        }
-        .cta a {
-            background: #0f4c81;
-            color: white;
-            padding: 1rem 2rem;
-            text-decoration: none;
-            font-weight: bold;
-            border-radius: 5px;
-        }
-        footer {
-            text-align: center;
-            padding: 2rem;
-            background: #eee;
-            font-size: 0.9rem;
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bootstouren Poreč – Fish Picnic &amp; Delfin Tour | Movi Tours Booker</title>
+<meta name="description" content="Fish Picnic und Delfin Sonnenuntergangstour ab Poreč, Kroatien. Persönliche Buchung direkt bei deinem lokalen Movi Tours Verkäufer – schnelle Anfrage per WhatsApp.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⛵</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800&family=Nunito+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --sea-deep:#0b3d5c;
+    --sea:#0f5a82;
+    --turquoise:#1fb6b0;
+    --turquoise-light:#e6f7f6;
+    --sunset:#f4a259;
+    --sunset-dark:#e8823a;
+    --sand:#fdf6ec;
+    --ink:#1f2d3d;
+    --ink-soft:#4d5c6b;
+    --white:#ffffff;
+    --radius:16px;
+    --shadow:0 10px 30px rgba(11,61,92,0.12);
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    font-family:'Nunito Sans',sans-serif;
+    color:var(--ink);
+    background:var(--white);
+    line-height:1.6;
+  }
+  h1,h2,h3,.logo{font-family:'Poppins',sans-serif;}
+  a{color:inherit;}
+  img,svg{max-width:100%;display:block;}
+  .container{max-width:1120px;margin:0 auto;padding:0 24px;}
+  .btn{
+    display:inline-flex;align-items:center;justify-content:center;gap:8px;
+    padding:14px 28px;border-radius:999px;font-weight:700;font-size:1rem;
+    text-decoration:none;cursor:pointer;border:none;transition:transform .15s ease, box-shadow .15s ease;
+  }
+  .btn:hover{transform:translateY(-2px);}
+  .btn-primary{background:var(--turquoise);color:var(--white);box-shadow:0 8px 20px rgba(31,182,176,0.35);}
+  .btn-primary:hover{box-shadow:0 12px 26px rgba(31,182,176,0.45);}
+  .btn-sunset{background:var(--sunset);color:var(--white);box-shadow:0 8px 20px rgba(244,162,89,0.4);}
+  .btn-sunset:hover{box-shadow:0 12px 26px rgba(244,162,89,0.5);}
+  .btn-ghost{background:transparent;color:var(--white);border:2px solid rgba(255,255,255,0.7);}
+  .btn-ghost:hover{background:rgba(255,255,255,0.12);}
+  .btn-outline{background:transparent;color:var(--sea-deep);border:2px solid var(--sea-deep);}
+  .btn-outline:hover{background:var(--sea-deep);color:var(--white);}
+  .eyebrow{
+    display:inline-block;text-transform:uppercase;letter-spacing:.12em;font-size:.78rem;
+    font-weight:700;color:var(--turquoise);margin-bottom:10px;
+  }
+  section{padding:80px 0;}
+  @media (max-width:640px){ section{padding:56px 0;} }
+
+  /* Header */
+  header{
+    position:sticky;top:0;z-index:100;background:rgba(11,61,92,0.92);
+    backdrop-filter:blur(6px);transition:box-shadow .2s ease;
+  }
+  header.scrolled{box-shadow:0 6px 24px rgba(0,0,0,0.18);}
+  .nav{display:flex;align-items:center;justify-content:space-between;padding:16px 24px;}
+  .logo{color:var(--white);font-weight:800;font-size:1.25rem;text-decoration:none;display:flex;align-items:center;gap:8px;}
+  .nav-links{display:flex;align-items:center;gap:28px;}
+  .nav-links a{color:var(--white);text-decoration:none;font-weight:600;font-size:.95rem;opacity:.9;}
+  .nav-links a:hover{opacity:1;}
+  .nav-cta{background:var(--turquoise);color:var(--white)!important;padding:10px 20px;border-radius:999px;opacity:1!important;}
+  .nav-toggle{display:none;background:none;border:none;color:var(--white);font-size:1.6rem;cursor:pointer;}
+  @media (max-width:860px){
+    .nav-links{
+      position:absolute;top:100%;left:0;right:0;background:var(--sea-deep);
+      flex-direction:column;align-items:flex-start;padding:16px 24px 24px;gap:16px;
+      display:none;
+    }
+    .nav-links.open{display:flex;}
+    .nav-toggle{display:block;}
+  }
+
+  /* Hero */
+  .hero{
+    position:relative;overflow:hidden;color:var(--white);
+    background:linear-gradient(160deg,var(--sea-deep) 0%,var(--sea) 55%,var(--turquoise) 130%);
+    padding:100px 0 140px;
+  }
+  .hero::before{
+    content:"";position:absolute;inset:0;
+    background-image:
+      radial-gradient(circle at 15% 25%, rgba(255,255,255,0.08) 0, transparent 40%),
+      radial-gradient(circle at 85% 15%, rgba(255,255,255,0.10) 0, transparent 35%);
+    pointer-events:none;
+  }
+  .hero-inner{position:relative;display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center;}
+  @media (max-width:860px){ .hero-inner{grid-template-columns:1fr;text-align:center;} }
+  .hero h1{font-size:clamp(2.1rem,4.5vw,3.2rem);line-height:1.15;margin:0 0 18px;}
+  .hero p.lead{font-size:1.15rem;color:rgba(255,255,255,0.9);max-width:520px;margin:0 0 30px;}
+  @media (max-width:860px){ .hero p.lead{margin-left:auto;margin-right:auto;} }
+  .hero-actions{display:flex;gap:16px;flex-wrap:wrap;}
+  @media (max-width:860px){ .hero-actions{justify-content:center;} }
+  .hero-badges{display:flex;gap:18px;margin-top:36px;flex-wrap:wrap;}
+  @media (max-width:860px){ .hero-badges{justify-content:center;} }
+  .hero-badge{display:flex;align-items:center;gap:8px;font-weight:700;font-size:.92rem;color:rgba(255,255,255,0.95);}
+  .hero-art{position:relative;}
+  .boat-scene{width:100%;height:auto;filter:drop-shadow(0 20px 30px rgba(0,0,0,0.25));}
+  .wave-divider{display:block;width:100%;position:relative;margin-top:-60px;}
+
+  /* Section headers */
+  .section-head{max-width:640px;margin:0 auto 48px;text-align:center;}
+  .section-head h2{font-size:clamp(1.6rem,3vw,2.2rem);margin:0 0 14px;color:var(--sea-deep);}
+  .section-head p{color:var(--ink-soft);font-size:1.05rem;margin:0;}
+
+  /* Tours */
+  .tours{background:var(--sand);}
+  .tour-grid{display:grid;grid-template-columns:1fr 1fr;gap:32px;}
+  @media (max-width:800px){ .tour-grid{grid-template-columns:1fr;} }
+  .tour-card{
+    background:var(--white);border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);
+    display:flex;flex-direction:column;
+  }
+  .tour-media{
+    height:200px;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;
+  }
+  .tour-media.fish{background:linear-gradient(135deg,#0f5a82,#1fb6b0);}
+  .tour-media.dolphin{background:linear-gradient(135deg,#0b3d5c,#f4a259);}
+  .tour-media svg{width:96px;height:96px;}
+  .tour-body{padding:28px;display:flex;flex-direction:column;flex:1;}
+  .tour-tag{
+    align-self:flex-start;font-size:.78rem;font-weight:700;text-transform:uppercase;letter-spacing:.06em;
+    padding:5px 12px;border-radius:999px;margin-bottom:12px;
+  }
+  .tag-fish{background:var(--turquoise-light);color:var(--turquoise);}
+  .tag-dolphin{background:#fdece1;color:var(--sunset-dark);}
+  .tour-body h3{font-size:1.4rem;margin:0 0 6px;color:var(--sea-deep);}
+  .tour-meta{color:var(--ink-soft);font-size:.9rem;margin-bottom:14px;display:flex;gap:14px;flex-wrap:wrap;}
+  .tour-meta span{display:inline-flex;align-items:center;gap:6px;}
+  .tour-body ul{margin:0 0 20px;padding-left:20px;color:var(--ink-soft);font-size:.96rem;}
+  .tour-body ul li{margin-bottom:6px;}
+  .tour-footer{margin-top:auto;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;}
+  .tour-price{font-size:1.05rem;}
+  .tour-price strong{font-size:1.5rem;color:var(--sea-deep);}
+  .tour-price small{display:block;color:var(--ink-soft);font-weight:400;font-size:.82rem;}
+
+  /* About */
+  .about{}
+  .about-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:48px;align-items:center;}
+  @media (max-width:800px){ .about-grid{grid-template-columns:1fr;} }
+  .about-photo{
+    aspect-ratio:4/5;border-radius:var(--radius);
+    background:linear-gradient(160deg,var(--turquoise) 0%,var(--sea) 100%);
+    display:flex;align-items:center;justify-content:center;box-shadow:var(--shadow);
+  }
+  .about-photo span{font-size:5rem;}
+  .about h2{color:var(--sea-deep);font-size:clamp(1.6rem,3vw,2.1rem);margin-top:0;}
+  .about p{color:var(--ink-soft);font-size:1.05rem;}
+  .about-stats{display:flex;gap:32px;margin-top:28px;flex-wrap:wrap;}
+  .about-stats div{text-align:left;}
+  .about-stats strong{display:block;font-size:1.8rem;color:var(--turquoise);font-family:'Poppins',sans-serif;}
+  .about-stats span{color:var(--ink-soft);font-size:.9rem;}
+
+  /* Booking */
+  .booking{background:linear-gradient(160deg,var(--sea-deep),var(--sea));color:var(--white);}
+  .booking .section-head h2{color:var(--white);}
+  .booking .section-head p{color:rgba(255,255,255,0.85);}
+  .booking-wrap{
+    background:var(--white);border-radius:var(--radius);box-shadow:var(--shadow);
+    padding:40px;color:var(--ink);max-width:720px;margin:0 auto;
+  }
+  @media (max-width:640px){ .booking-wrap{padding:28px 20px;} }
+  .form-row{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-bottom:18px;}
+  @media (max-width:560px){ .form-row{grid-template-columns:1fr;} }
+  .field{display:flex;flex-direction:column;gap:6px;}
+  .field.full{grid-column:1/-1;}
+  .field label{font-weight:700;font-size:.88rem;color:var(--sea-deep);}
+  .field input,.field select,.field textarea{
+    padding:12px 14px;border:2px solid #e2e8ef;border-radius:10px;font-family:inherit;font-size:1rem;
+    background:var(--white);color:var(--ink);
+  }
+  .field input:focus,.field select:focus,.field textarea:focus{outline:none;border-color:var(--turquoise);}
+  .tour-choice{display:flex;gap:12px;flex-wrap:wrap;}
+  .tour-choice label{
+    flex:1;min-width:180px;display:flex;align-items:center;gap:10px;padding:14px;border:2px solid #e2e8ef;
+    border-radius:10px;cursor:pointer;font-weight:700;font-size:.95rem;color:var(--ink-soft);
+  }
+  .tour-choice input{accent-color:var(--turquoise);width:18px;height:18px;}
+  .tour-choice label:has(input:checked){border-color:var(--turquoise);background:var(--turquoise-light);color:var(--sea-deep);}
+  .booking-submit{width:100%;margin-top:8px;}
+  .booking-note{font-size:.85rem;color:var(--ink-soft);margin-top:14px;text-align:center;}
+  .form-msg{display:none;margin-top:16px;padding:12px 16px;border-radius:10px;background:#fff3cd;color:#7a5b00;font-size:.9rem;}
+  .form-msg.show{display:block;}
+
+  /* FAQ */
+  .faq-list{max-width:760px;margin:0 auto;display:flex;flex-direction:column;gap:12px;}
+  .faq-item{border:1px solid #e6ebf1;border-radius:12px;overflow:hidden;}
+  .faq-q{
+    width:100%;text-align:left;background:var(--white);border:none;padding:18px 22px;font-weight:700;
+    font-size:1rem;color:var(--sea-deep);cursor:pointer;display:flex;justify-content:space-between;align-items:center;
+    font-family:inherit;
+  }
+  .faq-q .chev{transition:transform .2s ease;color:var(--turquoise);}
+  .faq-item.open .faq-q .chev{transform:rotate(180deg);}
+  .faq-a{max-height:0;overflow:hidden;transition:max-height .25s ease;padding:0 22px;color:var(--ink-soft);}
+  .faq-item.open .faq-a{max-height:220px;padding-bottom:18px;}
+
+  /* Footer */
+  footer{background:var(--sea-deep);color:rgba(255,255,255,0.85);padding:56px 0 28px;}
+  .footer-grid{display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:36px;margin-bottom:36px;}
+  @media (max-width:700px){ .footer-grid{grid-template-columns:1fr;} }
+  footer h4{color:var(--white);font-family:'Poppins',sans-serif;font-size:1.05rem;margin:0 0 14px;}
+  footer p, footer a{font-size:.92rem;color:rgba(255,255,255,0.75);}
+  footer a{text-decoration:none;}
+  footer a:hover{color:var(--white);}
+  footer ul{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:10px;}
+  .footer-bottom{border-top:1px solid rgba(255,255,255,0.15);padding-top:22px;font-size:.82rem;color:rgba(255,255,255,0.55);text-align:center;}
+
+  /* Floating WhatsApp button */
+  .wa-float{
+    position:fixed;bottom:24px;right:24px;z-index:200;
+    background:#25D366;color:var(--white);width:60px;height:60px;border-radius:50%;
+    display:flex;align-items:center;justify-content:center;box-shadow:0 10px 24px rgba(0,0,0,0.25);
+    text-decoration:none;transition:transform .15s ease;
+  }
+  .wa-float:hover{transform:scale(1.07);}
+  .wa-float svg{width:30px;height:30px;}
+</style>
 </head>
 <body>
-    <header>
-        <h1>SOLARENA</h1>
-        <p>Solare Stadt-Infrastruktur für eine nachhaltige Zukunft</p>
-    </header>
 
-    <section>
-        <h2>Unsere Lösungen</h2>
-        <div class="products">
-            <div class="product">
-                <h3>Solar-Straßenlaternen</h3>
-                <p>Autarke, netzunabhängige Beleuchtung für Straßen, Parks und Plätze.</p>
-            </div>
-            <div class="product">
-                <h3>Solare Ladepunkte</h3>
-                <p>Öffentliche Ladepunkte für E-Bikes, Scooter und Kleingeräte – gespeist aus Sonnenenergie.</p>
-            </div>
-            <div class="product">
-                <h3>Solarbetriebene Stadtmöbel</h3>
-                <p>Intelligente Bänke mit Ladefunktion, Beleuchtung und Umwelt-Sensorik.</p>
-            </div>
-        </div>
-        <div class="cta">
-            <a href="#kontakt">Kontakt aufnehmen</a>
-        </div>
-    </section>
+<!--
+  ============================================================
+  ANLEITUNG / PLATZHALTER — bitte vor Veröffentlichung ersetzen
+  ============================================================
+  1. WHATSAPP_NUMBER (unten im <script>) → echte WhatsApp-Nummer
+     im Format Ländercode+Nummer ohne "+", "00" oder Leerzeichen,
+     z.B. für Kroatien: 385981234567
+  2. Alle Texte in eckigen Klammern [ ... ] → echte Angaben
+     (Name, Telefonnummer, E-Mail, Treffpunkt)
+  3. Preise wurden nach Angabe eingetragen (35€/20€, 25€/15€) —
+     bei Änderung einfach im Text suchen & ersetzen.
+  4. Fotos: aktuell nur farbige Illustrationen (kein Server nötig).
+     Wer echte Fotos hat, kann .tour-media / .about-photo per
+     background-image: url('bilder/xyz.jpg') ersetzen.
+  Siehe README.md für Deployment (z.B. GitHub Pages, Netlify).
+  ============================================================
+-->
 
-    <footer>
-        &copy; 2025 SOLARENA. Energie von morgen, heute installiert.
-    </footer>
+<header id="siteHeader">
+  <div class="nav container">
+    <a href="#top" class="logo">⛵ Poreč Bootstouren</a>
+    <button class="nav-toggle" id="navToggle" aria-label="Menü öffnen">☰</button>
+    <nav class="nav-links" id="navLinks">
+      <a href="#touren">Touren</a>
+      <a href="#ueber-uns">Über uns</a>
+      <a href="#faq">FAQ</a>
+      <a href="#kontakt">Kontakt</a>
+      <a href="#buchen" class="nav-cta">Jetzt anfragen</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero" id="top">
+  <div class="container hero-inner">
+    <div>
+      <span class="eyebrow">Poreč · Kroatien</span>
+      <h1>Bootstouren erleben,<br>direkt vor Ort gebucht.</h1>
+      <p class="lead">Persönliche Buchung bei deinem lokalen Movi-Tours-Verkäufer in Poreč – Fish Picnic ganztags oder die Delfin-Tour zum Sonnenuntergang. Schnelle Anfrage, unkomplizierte Antwort.</p>
+      <div class="hero-actions">
+        <a href="#touren" class="btn btn-primary">Touren ansehen</a>
+        <a href="#buchen" class="btn btn-ghost">Direkt anfragen</a>
+      </div>
+      <div class="hero-badges">
+        <div class="hero-badge">⭐️ Persönliche Beratung am Strand &amp; online</div>
+        <div class="hero-badge">🇭🇷 Lokal in Poreč</div>
+      </div>
+    </div>
+    <div class="hero-art">
+      <svg viewBox="0 0 400 320" class="boat-scene" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="320" cy="60" r="34" fill="#ffe08a" opacity="0.9"/>
+        <path d="M0 210 Q100 190 200 210 T400 210 V320 H0 Z" fill="#0a3350" opacity="0.55"/>
+        <path d="M0 235 Q100 215 200 235 T400 235 V320 H0 Z" fill="#0d4a70" opacity="0.7"/>
+        <g>
+          <path d="M120 190 L280 190 L255 235 L145 235 Z" fill="#f4f8fb"/>
+          <rect x="185" y="130" width="8" height="65" fill="#e7edf3"/>
+          <path d="M193 135 L193 185 L245 185 Z" fill="#ffffff"/>
+          <path d="M193 135 L193 185 L150 182 Z" fill="#d9e4ec"/>
+          <rect x="150" y="188" width="100" height="10" rx="3" fill="#1fb6b0"/>
+        </g>
+        <path d="M60 260 Q75 250 90 260 Q105 270 120 260" stroke="#7fd8ff" stroke-width="4" fill="none" opacity="0.8"/>
+        <path d="M280 270 Q295 260 310 270 Q325 280 340 270" stroke="#7fd8ff" stroke-width="4" fill="none" opacity="0.7"/>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<section class="tours" id="touren">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">Unsere Touren</span>
+      <h2>Zwei Ausflüge, ein unvergesslicher Tag</h2>
+      <p>Beide Touren starten in Poreč mit dem Boot von Movi Tours – wähle, was zu deinem Urlaubstag passt.</p>
+    </div>
+    <div class="tour-grid">
+
+      <article class="tour-card">
+        <div class="tour-media fish">
+          <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M6 32c8-14 30-14 38 0-8 14-30 14-38 0Z" fill="#fff" opacity="0.95"/>
+            <circle cx="16" cy="30" r="2.4" fill="#0f5a82"/>
+            <path d="M44 32l12-8v16l-12-8Z" fill="#fff" opacity="0.85"/>
+          </svg>
+        </div>
+        <div class="tour-body">
+          <span class="tour-tag tag-fish">Ganztagestour</span>
+          <h3>Fish Picnic</h3>
+          <div class="tour-meta">
+            <span>⏱️ Ganztägig</span>
+            <span>🍽️ Mittagessen an Bord</span>
+            <span>🐟 Fischgrillen auf dem Schiff</span>
+          </div>
+          <ul>
+            <li>Entspannte Bootsfahrt entlang der Küste bei Poreč</li>
+            <li>Frisch zubereitetes Fischgericht direkt an Bord</li>
+            <li>Badestopps an versteckten Buchten</li>
+            <li>Ideal für Familien &amp; Gruppen</li>
+          </ul>
+          <div class="tour-footer">
+            <div class="tour-price">
+              <strong>35 €</strong> <small>pro Erwachsenem · 20 € Kinder</small>
+            </div>
+            <a href="#buchen" class="btn btn-primary" data-tour="Fish Picnic">Anfragen</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="tour-card">
+        <div class="tour-media dolphin">
+          <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M8 40c10-22 30-30 46-18-6 4-8 8-8 8s10 2 10 10c-14 6-30 4-38-4-4 6-10 6-10 4Z" fill="#fff" opacity="0.95"/>
+            <circle cx="20" cy="26" r="2" fill="#0b3d5c"/>
+          </svg>
+        </div>
+        <div class="tour-body">
+          <span class="tour-tag tag-dolphin">Sonnenuntergang</span>
+          <h3>Delfin Tour</h3>
+          <div class="tour-meta">
+            <span>⏱️ 2–3 Stunden</span>
+            <span>🌅 Sonnenuntergang</span>
+            <span>🐬 Delfine beobachten</span>
+          </div>
+          <ul>
+            <li>Ausfahrt am späten Nachmittag / Abend</li>
+            <li>Ausschau nach wilden Delfinen vor der Küste</li>
+            <li>Traumhafter Sonnenuntergang auf dem Meer</li>
+            <li>Perfekt für Paare &amp; kurze Auszeiten</li>
+          </ul>
+          <div class="tour-footer">
+            <div class="tour-price">
+              <strong>25 €</strong> <small>pro Erwachsenem · 15 € Kinder</small>
+            </div>
+            <a href="#buchen" class="btn btn-sunset" data-tour="Delfin Tour">Anfragen</a>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<section class="about" id="ueber-uns">
+  <div class="container about-grid">
+    <div class="about-photo"><span>🧑‍✈️</span></div>
+    <div>
+      <span class="eyebrow">Über uns</span>
+      <h2>Dein persönlicher Ansprechpartner in Poreč</h2>
+      <p>[NAME DES VATERS] verkauft als freier Verkäufer (Booker) die Bootstouren von Movi Tours in Poreč und Umgebung. Was am Strand mit einem netten Gespräch beginnt, geht jetzt auch online weiter: Anfrage schicken, Details klären, Tour genießen – unkompliziert und persönlich.</p>
+      <p>Ob spontan am Strand angesprochen oder online gefunden – du bekommst dieselbe ehrliche Beratung und schnelle Antworten.</p>
+      <div class="about-stats">
+        <div><strong>2</strong><span>Touren im Angebot</span></div>
+        <div><strong>100%</strong><span>Persönlicher Kontakt</span></div>
+        <div><strong>Poreč</strong><span>Start &amp; Umgebung</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="booking" id="buchen">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">Buchungsanfrage</span>
+      <h2>Jetzt unverbindlich anfragen</h2>
+      <p>Formular ausfüllen und per WhatsApp senden – die Anfrage geht direkt an deinen Ansprechpartner in Poreč. Keine Zahlung, keine Verpflichtung.</p>
+    </div>
+    <div class="booking-wrap">
+      <form id="bookingForm">
+        <div class="field full" style="margin-bottom:18px;">
+          <label>Welche Tour interessiert dich?</label>
+          <div class="tour-choice">
+            <label><input type="radio" name="tour" value="Fish Picnic" checked> 🐟 Fish Picnic (ganztags)</label>
+            <label><input type="radio" name="tour" value="Delfin Tour"> 🐬 Delfin Tour (Sonnenuntergang)</label>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="field">
+            <label for="name">Name</label>
+            <input type="text" id="name" required placeholder="Dein Name">
+          </div>
+          <div class="field">
+            <label for="datum">Wunschdatum</label>
+            <input type="date" id="datum" required>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="field">
+            <label for="erwachsene">Erwachsene</label>
+            <input type="number" id="erwachsene" min="1" value="2" required>
+          </div>
+          <div class="field">
+            <label for="kinder">Kinder</label>
+            <input type="number" id="kinder" min="0" value="0">
+          </div>
+        </div>
+        <div class="field full" style="margin-bottom:18px;">
+          <label for="nachricht">Nachricht (optional)</label>
+          <textarea id="nachricht" rows="3" placeholder="Unterkunft / Uhrzeit / weitere Wünsche"></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary booking-submit">📲 Anfrage per WhatsApp senden</button>
+        <div class="form-msg" id="formMsg">Bitte fülle Name und Wunschdatum aus, bevor du die Anfrage sendest.</div>
+        <p class="booking-note">Alternativ direkt erreichbar: <a href="tel:+385000000000" style="color:var(--sea-deep);font-weight:700;">[TELEFONNUMMER]</a> · <a href="mailto:info@example.com" style="color:var(--sea-deep);font-weight:700;">[EMAIL]</a></p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<section id="faq">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">Häufige Fragen</span>
+      <h2>Gut zu wissen</h2>
+    </div>
+    <div class="faq-list">
+      <div class="faq-item">
+        <button class="faq-q">Wo ist der Treffpunkt? <span class="chev">▾</span></button>
+        <div class="faq-a"><p>[TREFFPUNKT eintragen, z.B. Hafen Poreč / Anlegestelle Movi Tours]. Nach der Buchungsanfrage erhältst du die genauen Details.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">Was sollte ich mitbringen? <span class="chev">▾</span></button>
+        <div class="faq-a"><p>Badesachen, Handtuch, Sonnenschutz und gute Laune. Bei der Fish Picnic Tour ist das Mittagessen bereits inklusive.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">Ist die Tour auch für Kinder geeignet? <span class="chev">▾</span></button>
+        <div class="faq-a"><p>Ja, beide Touren sind familienfreundlich. Kinderpreise sind bei den jeweiligen Touren angegeben.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">Was passiert bei schlechtem Wetter? <span class="chev">▾</span></button>
+        <div class="faq-a"><p>Bei ungünstigen Bedingungen wird die Tour gemeinsam verschoben oder storniert. Details klärst du direkt bei der Buchungsanfrage.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer id="kontakt">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <h4>⛵ Poreč Bootstouren</h4>
+        <p>Fish Picnic &amp; Delfin Tour ab Poreč – gebucht direkt bei deinem lokalen Movi Tours Verkäufer.</p>
+      </div>
+      <div>
+        <h4>Kontakt</h4>
+        <ul>
+          <li>📍 Poreč, Kroatien</li>
+          <li>📞 <a href="tel:+385000000000">[TELEFONNUMMER]</a></li>
+          <li>💬 <a href="#" id="footerWa">WhatsApp schreiben</a></li>
+          <li>✉️ <a href="mailto:info@example.com">[EMAIL]</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Navigation</h4>
+        <ul>
+          <li><a href="#touren">Touren</a></li>
+          <li><a href="#ueber-uns">Über uns</a></li>
+          <li><a href="#faq">FAQ</a></li>
+          <li><a href="#buchen">Buchungsanfrage</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      &copy; <span id="year"></span> Poreč Bootstouren · Unabhängiger Verkäufer (Booker) für Movi Tours · Alle Touren vorbehaltlich Verfügbarkeit &amp; Wetter
+    </div>
+  </div>
+</footer>
+
+<a href="#" class="wa-float" id="waFloat" aria-label="WhatsApp Kontakt" target="_blank" rel="noopener">
+  <svg viewBox="0 0 32 32" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+    <path d="M16.004 3C9.4 3 4 8.373 4 15c0 2.42.71 4.68 1.94 6.57L4 29l7.61-1.9A11.94 11.94 0 0 0 16 27c6.6 0 12-5.373 12-12S22.6 3 16.004 3Zm0 21.8c-1.98 0-3.83-.55-5.4-1.5l-.39-.23-4.51 1.13 1.2-4.38-.25-.4A9.76 9.76 0 0 1 5.2 15c0-5.96 4.85-10.8 10.8-10.8S26.8 9.04 26.8 15 21.96 24.8 16.004 24.8Zm5.98-8.14c-.33-.16-1.94-.96-2.24-1.07-.3-.11-.52-.16-.74.16-.22.33-.85 1.07-1.04 1.29-.19.22-.38.24-.71.08-.33-.16-1.38-.51-2.63-1.63-.97-.87-1.63-1.94-1.82-2.27-.19-.33-.02-.5.14-.67.15-.15.33-.38.5-.57.16-.19.22-.33.33-.55.11-.22.05-.41-.03-.57-.08-.16-.74-1.78-1.01-2.44-.27-.64-.54-.55-.74-.56h-.63c-.22 0-.57.08-.87.41-.3.33-1.14 1.11-1.14 2.71s1.17 3.14 1.33 3.36c.16.22 2.3 3.5 5.57 4.91.78.34 1.38.54 1.86.69.78.25 1.49.21 2.05.13.63-.09 1.94-.79 2.21-1.56.27-.76.27-1.42.19-1.56-.08-.14-.3-.22-.63-.38Z"/>
+  </svg>
+</a>
+
+<script>
+  // ================================================================
+  // PLATZHALTER — bitte durch echte WhatsApp-Nummer ersetzen
+  // Format: Ländercode + Nummer, ohne "+", "00" oder Leerzeichen
+  // Beispiel Kroatien: "385981234567"
+  // ================================================================
+  const WHATSAPP_NUMBER = "385000000000";
+
+  // Header shadow on scroll
+  const header = document.getElementById('siteHeader');
+  window.addEventListener('scroll', () => {
+    header.classList.toggle('scrolled', window.scrollY > 10);
+  });
+
+  // Mobile nav toggle
+  const navToggle = document.getElementById('navToggle');
+  const navLinks = document.getElementById('navLinks');
+  navToggle.addEventListener('click', () => navLinks.classList.toggle('open'));
+  navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => navLinks.classList.remove('open')));
+
+  // Preselect tour when clicking a card CTA
+  document.querySelectorAll('[data-tour]').forEach(el => {
+    el.addEventListener('click', () => {
+      const tour = el.getAttribute('data-tour');
+      const radio = document.querySelector(`input[name="tour"][value="${tour}"]`);
+      if (radio) radio.checked = true;
+    });
+  });
+
+  // Floating + footer WhatsApp buttons (generic message)
+  function baseWaLink(text) {
+    return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(text)}`;
+  }
+  document.getElementById('waFloat').href = baseWaLink('Hallo! Ich interessiere mich für eine Bootstour ab Poreč.');
+  document.getElementById('footerWa').addEventListener('click', (e) => {
+    e.preventDefault();
+    window.open(baseWaLink('Hallo! Ich interessiere mich für eine Bootstour ab Poreč.'), '_blank');
+  });
+
+  // Booking form -> WhatsApp message
+  const form = document.getElementById('bookingForm');
+  const formMsg = document.getElementById('formMsg');
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const name = document.getElementById('name').value.trim();
+    const datum = document.getElementById('datum').value;
+    if (!name || !datum) {
+      formMsg.classList.add('show');
+      return;
+    }
+    formMsg.classList.remove('show');
+    const tour = document.querySelector('input[name="tour"]:checked').value;
+    const erwachsene = document.getElementById('erwachsene').value || '0';
+    const kinder = document.getElementById('kinder').value || '0';
+    const nachricht = document.getElementById('nachricht').value.trim();
+
+    const lines = [
+      `Hallo! Ich möchte eine Bootstour buchen.`,
+      `Tour: ${tour}`,
+      `Name: ${name}`,
+      `Datum: ${datum}`,
+      `Personen: ${erwachsene} Erwachsene, ${kinder} Kinder`,
+    ];
+    if (nachricht) lines.push(`Nachricht: ${nachricht}`);
+
+    window.open(baseWaLink(lines.join('\n')), '_blank');
+  });
+
+  // FAQ accordion
+  document.querySelectorAll('.faq-item').forEach(item => {
+    item.querySelector('.faq-q').addEventListener('click', () => {
+      const isOpen = item.classList.contains('open');
+      document.querySelectorAll('.faq-item.open').forEach(o => o.classList.remove('open'));
+      if (!isOpen) item.classList.add('open');
+    });
+  });
+
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
 </body>
 </html>
