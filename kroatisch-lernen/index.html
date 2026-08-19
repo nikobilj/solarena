@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hrvatski – Kroatisch lernen</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>%F0%9F%87%AD%F0%9F%87%B7</text></svg>">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div id="topbar">
+    <div class="brand">🇭🇷 Hrvatski</div>
+    <div class="stats">
+      <div class="stat">🔥 <span id="streak-count">0</span></div>
+      <div class="stat">🪙 <span id="xp-count">0</span></div>
+    </div>
+  </div>
+
+  <div id="path-screen"></div>
+
+  <div id="lesson-screen" class="hidden">
+    <div class="lesson-header">
+      <button class="close-btn" id="close-lesson-btn">✕</button>
+      <div class="progress-track"><div class="progress-fill" id="progress-fill" style="width:0%"></div></div>
+      <div class="hearts" id="hearts"></div>
+    </div>
+    <div class="exercise-area" id="exercise-area"></div>
+    <div class="footer-bar" id="footer-bar">
+      <div class="feedback-text" id="feedback-text"></div>
+      <button class="big-btn" id="check-btn" disabled>Prüfen</button>
+    </div>
+  </div>
+
+  <div id="summary-screen" class="center-screen hidden">
+    <div class="emoji">🎉</div>
+    <h1>Lektion abgeschlossen!</h1>
+    <div class="summary-stats">
+      <div class="summary-stat">
+        <div class="value" id="summary-xp">+0</div>
+        <div class="label">XP</div>
+      </div>
+      <div class="summary-stat">
+        <div class="value" id="summary-accuracy">0%</div>
+        <div class="label">Genauigkeit</div>
+      </div>
+      <div class="summary-stat">
+        <div class="value" id="summary-streak">0</div>
+        <div class="label">Serie</div>
+      </div>
+    </div>
+    <button class="big-btn primary" id="summary-continue-btn">Weiter</button>
+  </div>
+
+  <div id="fail-screen" class="center-screen hidden">
+    <div class="emoji">💔</div>
+    <h1>Keine Herzen mehr!</h1>
+    <p>Versuch die Lektion noch einmal – du schaffst das.</p>
+    <div style="display:flex; gap:1rem; margin-top:1rem;">
+      <button class="big-btn" id="fail-back-btn">Zum Pfad</button>
+      <button class="big-btn primary" id="fail-retry-btn">Erneut versuchen</button>
+    </div>
+  </div>
+
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
