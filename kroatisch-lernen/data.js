@@ -8,7 +8,7 @@ const COURSE = {
       id: "u1",
       title: "Grundlagen",
       subtitle: "Begrüßung & Vorstellung",
-      color: "#58cc02",
+      color: "#1f7a8c",
       lessons: [
         {
           id: "u1-l1",
@@ -52,7 +52,7 @@ const COURSE = {
       id: "u2",
       title: "Zahlen & Familie",
       subtitle: "Zählen und über Familie sprechen",
-      color: "#1cb0f6",
+      color: "#2c5f8a",
       lessons: [
         {
           id: "u2-l1",
@@ -96,7 +96,7 @@ const COURSE = {
       id: "u3",
       title: "Essen & Trinken",
       subtitle: "Im Restaurant und beim Einkaufen",
-      color: "#ff9600",
+      color: "#c65b3a",
       lessons: [
         {
           id: "u3-l1",
@@ -140,7 +140,7 @@ const COURSE = {
       id: "u4",
       title: "Verben & Sätze",
       subtitle: "biti, imati und Fragewörter",
-      color: "#ce82ff",
+      color: "#6b4c6b",
       lessons: [
         {
           id: "u4-l1",
@@ -184,7 +184,7 @@ const COURSE = {
       id: "u5",
       title: "Alltag & Zeit",
       subtitle: "Wochentage, Zeitangaben und Alltagsverben",
-      color: "#2fb8ac",
+      color: "#5c7a3f",
       lessons: [
         {
           id: "u5-l1",
@@ -228,7 +228,7 @@ const COURSE = {
       id: "u6",
       title: "Wetter & Kleidung",
       subtitle: "Über Wetter sprechen und sich anziehen",
-      color: "#e91e8c",
+      color: "#c78a2e",
       lessons: [
         {
           id: "u6-l1",
@@ -272,7 +272,7 @@ const COURSE = {
       id: "u7",
       title: "Unterwegs",
       subtitle: "Richtungen, Verkehrsmittel und die Stadt",
-      color: "#4a6fa5",
+      color: "#46707c",
       lessons: [
         {
           id: "u7-l1",
