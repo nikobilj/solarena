@@ -179,6 +179,138 @@ const COURSE = {
           ]
         }
       ]
+    },
+    {
+      id: "u5",
+      title: "Alltag & Zeit",
+      subtitle: "Wochentage, Zeitangaben und Alltagsverben",
+      color: "#2fb8ac",
+      lessons: [
+        {
+          id: "u5-l1",
+          title: "Wochentage",
+          exercises: [
+            { type: "mc", prompt: "„ponedjeljak“ heißt auf Deutsch:", options: ["Montag", "Dienstag", "Mittwoch", "Freitag"], answer: "Montag" },
+            { type: "mc", prompt: "„petak“ heißt auf Deutsch:", options: ["Freitag", "Donnerstag", "Samstag", "Sonntag"], answer: "Freitag" },
+            { type: "mc", prompt: "Wie sagt man „Mittwoch“?", options: ["srijeda", "utorak", "četvrtak", "subota"], answer: "srijeda" },
+            { type: "mc", prompt: "Wie sagt man „Sonntag“?", options: ["nedjelja", "subota", "petak", "ponedjeljak"], answer: "nedjelja" },
+            { type: "wordbank", prompt: "Übersetze: Heute ist Montag.", bank: ["Danas", "je", "ponedjeljak", "Sutra", "utorak"], answer: ["Danas", "je", "ponedjeljak"] },
+            { type: "match", prompt: "Ordne die Wochentage einander zu.", pairs: [["ponedjeljak", "Montag"], ["srijeda", "Mittwoch"], ["petak", "Freitag"], ["nedjelja", "Sonntag"]] }
+          ]
+        },
+        {
+          id: "u5-l2",
+          title: "Heute, morgen, gestern",
+          exercises: [
+            { type: "mc", prompt: "„sutra“ heißt auf Deutsch:", options: ["morgen", "heute", "gestern", "jetzt"], answer: "morgen" },
+            { type: "mc", prompt: "„jučer“ heißt auf Deutsch:", options: ["gestern", "heute", "morgen", "jetzt"], answer: "gestern" },
+            { type: "mc", prompt: "Wie sagt man „jetzt“?", options: ["sada", "danas", "sutra", "jučer"], answer: "sada" },
+            { type: "mc", prompt: "Wie sagt man „Woche“?", options: ["tjedan", "dan", "mjesec", "godina"], answer: "tjedan" },
+            { type: "wordbank", prompt: "Übersetze: Ich lerne heute Kroatisch.", bank: ["Učim", "danas", "hrvatski", "Radim", "sutra"], answer: ["Učim", "danas", "hrvatski"] },
+            { type: "match", prompt: "Ordne die Zeitwörter einander zu.", pairs: [["danas", "heute"], ["sutra", "morgen"], ["jučer", "gestern"], ["tjedan", "Woche"]] }
+          ]
+        },
+        {
+          id: "u5-l3",
+          title: "Alltagsverben",
+          exercises: [
+            { type: "mc", prompt: "„Radim“ heißt:", options: ["Ich arbeite", "Ich lerne", "Ich schlafe", "Ich wohne"], answer: "Ich arbeite" },
+            { type: "mc", prompt: "„Spavam“ heißt:", options: ["Ich schlafe", "Ich arbeite", "Ich lerne", "Ich wohne"], answer: "Ich schlafe" },
+            { type: "mc", prompt: "Wie sagt man „Ich lerne“?", options: ["Učim", "Radim", "Spavam", "Živim"], answer: "Učim" },
+            { type: "mc", prompt: "Wie sagt man „Ich wohne“?", options: ["Živim", "Radim", "Učim", "Spavam"], answer: "Živim" },
+            { type: "wordbank", prompt: "Übersetze: Ich wohne in Zagreb.", bank: ["Živim", "u", "Zagrebu", "Radim", "Berlinu"], answer: ["Živim", "u", "Zagrebu"] },
+            { type: "match", prompt: "Ordne die Verben einander zu.", pairs: [["raditi", "arbeiten"], ["učiti", "lernen"], ["spavati", "schlafen"], ["živjeti", "leben/wohnen"]] }
+          ]
+        }
+      ]
+    },
+    {
+      id: "u6",
+      title: "Wetter & Kleidung",
+      subtitle: "Über Wetter sprechen und sich anziehen",
+      color: "#e91e8c",
+      lessons: [
+        {
+          id: "u6-l1",
+          title: "Wetter",
+          exercises: [
+            { type: "mc", prompt: "„kiša“ heißt auf Deutsch:", options: ["Regen", "Schnee", "Sonne", "Wind"], answer: "Regen" },
+            { type: "mc", prompt: "„sunčano“ heißt auf Deutsch:", options: ["sonnig", "bewölkt", "kalt", "warm"], answer: "sonnig" },
+            { type: "mc", prompt: "Wie sagt man „Schnee“?", options: ["snijeg", "kiša", "sunce", "vjetar"], answer: "snijeg" },
+            { type: "mc", prompt: "Wie sagt man „bewölkt“?", options: ["oblačno", "sunčano", "hladno", "toplo"], answer: "oblačno" },
+            { type: "wordbank", prompt: "Übersetze: Heute ist es sonnig.", bank: ["Danas", "je", "sunčano", "Sutra", "oblačno"], answer: ["Danas", "je", "sunčano"] },
+            { type: "match", prompt: "Ordne die Wetter-Wörter einander zu.", pairs: [["kiša", "Regen"], ["snijeg", "Schnee"], ["sunčano", "sonnig"], ["oblačno", "bewölkt"]] }
+          ]
+        },
+        {
+          id: "u6-l2",
+          title: "Temperatur & Jahreszeiten",
+          exercises: [
+            { type: "mc", prompt: "„hladno“ heißt auf Deutsch:", options: ["kalt", "warm", "windig", "sonnig"], answer: "kalt" },
+            { type: "mc", prompt: "„ljeto“ heißt auf Deutsch:", options: ["Sommer", "Winter", "Frühling", "Herbst"], answer: "Sommer" },
+            { type: "mc", prompt: "Wie sagt man „warm“?", options: ["toplo", "hladno", "vjetrovito", "sunčano"], answer: "toplo" },
+            { type: "mc", prompt: "Wie sagt man „Winter“?", options: ["zima", "ljeto", "proljeće", "jesen"], answer: "zima" },
+            { type: "wordbank", prompt: "Übersetze: Im Winter ist es kalt.", bank: ["Zimi", "je", "hladno", "Ljeti", "toplo"], answer: ["Zimi", "je", "hladno"] },
+            { type: "match", prompt: "Ordne die Jahreszeiten einander zu.", pairs: [["proljeće", "Frühling"], ["ljeto", "Sommer"], ["jesen", "Herbst"], ["zima", "Winter"]] }
+          ]
+        },
+        {
+          id: "u6-l3",
+          title: "Kleidung",
+          exercises: [
+            { type: "mc", prompt: "„majica“ heißt auf Deutsch:", options: ["T-Shirt", "Hose", "Jacke", "Schuhe"], answer: "T-Shirt" },
+            { type: "mc", prompt: "„cipele“ heißt auf Deutsch:", options: ["Schuhe", "Hut", "Hose", "Jacke"], answer: "Schuhe" },
+            { type: "mc", prompt: "Wie sagt man „Jacke“?", options: ["jakna", "majica", "hlače", "šešir"], answer: "jakna" },
+            { type: "mc", prompt: "Wie sagt man „Hose“?", options: ["hlače", "majica", "jakna", "cipele"], answer: "hlače" },
+            { type: "wordbank", prompt: "Übersetze: Ich trage eine Jacke.", bank: ["Nosim", "jaknu", "Imam", "majicu"], answer: ["Nosim", "jaknu"] },
+            { type: "match", prompt: "Ordne die Kleidungsstücke einander zu.", pairs: [["majica", "T-Shirt"], ["hlače", "Hose"], ["jakna", "Jacke"], ["cipele", "Schuhe"]] }
+          ]
+        }
+      ]
+    },
+    {
+      id: "u7",
+      title: "Unterwegs",
+      subtitle: "Richtungen, Verkehrsmittel und die Stadt",
+      color: "#4a6fa5",
+      lessons: [
+        {
+          id: "u7-l1",
+          title: "Richtungen",
+          exercises: [
+            { type: "mc", prompt: "„lijevo“ heißt auf Deutsch:", options: ["links", "rechts", "geradeaus", "weit"], answer: "links" },
+            { type: "mc", prompt: "„daleko“ heißt auf Deutsch:", options: ["weit", "nah", "links", "rechts"], answer: "weit" },
+            { type: "mc", prompt: "Wie sagt man „rechts“?", options: ["desno", "lijevo", "ravno", "blizu"], answer: "desno" },
+            { type: "mc", prompt: "Wie sagt man „geradeaus“?", options: ["ravno", "lijevo", "desno", "daleko"], answer: "ravno" },
+            { type: "wordbank", prompt: "Übersetze: Wo ist der Bahnhof?", bank: ["Gdje", "je", "kolodvor", "Kako", "grad"], answer: ["Gdje", "je", "kolodvor"] },
+            { type: "match", prompt: "Ordne die Richtungen einander zu.", pairs: [["lijevo", "links"], ["desno", "rechts"], ["ravno", "geradeaus"], ["blizu", "nah"]] }
+          ]
+        },
+        {
+          id: "u7-l2",
+          title: "Verkehrsmittel",
+          exercises: [
+            { type: "mc", prompt: "„vlak“ heißt auf Deutsch:", options: ["Zug", "Bus", "Flugzeug", "Auto"], answer: "Zug" },
+            { type: "mc", prompt: "„bicikl“ heißt auf Deutsch:", options: ["Fahrrad", "Auto", "Bus", "Zug"], answer: "Fahrrad" },
+            { type: "mc", prompt: "Wie sagt man „Flugzeug“?", options: ["avion", "vlak", "autobus", "auto"], answer: "avion" },
+            { type: "mc", prompt: "Wie sagt man „Auto“?", options: ["auto", "vlak", "bicikl", "avion"], answer: "auto" },
+            { type: "wordbank", prompt: "Übersetze: Ich fahre mit dem Zug.", bank: ["Putujem", "vlakom", "Idem", "autom"], answer: ["Putujem", "vlakom"] },
+            { type: "match", prompt: "Ordne die Verkehrsmittel einander zu.", pairs: [["autobus", "Bus"], ["vlak", "Zug"], ["avion", "Flugzeug"], ["bicikl", "Fahrrad"]] }
+          ]
+        },
+        {
+          id: "u7-l3",
+          title: "In der Stadt",
+          exercises: [
+            { type: "mc", prompt: "„grad“ heißt auf Deutsch:", options: ["Stadt", "Straße", "Platz", "Bahnhof"], answer: "Stadt" },
+            { type: "mc", prompt: "„trg“ heißt auf Deutsch:", options: ["Platz", "Straße", "Stadt", "Hotel"], answer: "Platz" },
+            { type: "mc", prompt: "Wie sagt man „Straße“?", options: ["ulica", "grad", "trg", "hotel"], answer: "ulica" },
+            { type: "mc", prompt: "Wie sagt man „Flughafen“?", options: ["zračna luka", "kolodvor", "hotel", "grad"], answer: "zračna luka" },
+            { type: "wordbank", prompt: "Übersetze: Das Hotel ist in der Stadt.", bank: ["Hotel", "je", "u", "gradu", "ulici"], answer: ["Hotel", "je", "u", "gradu"] },
+            { type: "match", prompt: "Ordne die Orte einander zu.", pairs: [["grad", "Stadt"], ["ulica", "Straße"], ["kolodvor", "Bahnhof"], ["trg", "Platz"]] }
+          ]
+        }
+      ]
     }
   ]
 };
